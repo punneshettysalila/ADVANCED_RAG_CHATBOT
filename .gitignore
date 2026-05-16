@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Local env
+.env
+
+# Local env variants
+.env.local
+.env.*
+
+# A2A memory store
+a2a_multiagent/.a2a_memory/
+
+# Diagrams output
+a2a_multiagent/diagrams/*.png
+diagrams/*.png
+
+# Node
+node_modules/
+
+# Build
+dist/
+build/
+
+# Logs
+*.log
