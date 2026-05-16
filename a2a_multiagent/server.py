@@ -25,6 +25,7 @@ import json
 import logging
 import asyncio
 from contextlib import asynccontextmanager
+from pathlib import Path
 from typing import Dict, Optional
 
 import uvicorn
@@ -213,7 +214,8 @@ def send_task_sync(req: ChatRequest):
 # Serve static UI
 # ─────────────────────────────────────────────
 
-app.mount("/", StaticFiles(directory="static", html=True), name="static")
+STATIC_DIR = Path(__file__).resolve().parent / "static"
+app.mount("/", StaticFiles(directory=str(STATIC_DIR), html=True), name="static")
 
 
 # ─────────────────────────────────────────────
